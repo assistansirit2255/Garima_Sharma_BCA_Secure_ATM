@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>ATM Login</h1>
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+        <form action="/login" method="post">
+            <div class="form-group">
+                <label for="atm_number">ATM Number:</label>
+                <input type="text" id="atm_number" name="atm_number" required>
+            </div>
+            <div class="form-group">
+                <label for="fingerprint">Fingerprint (Simulated):</label>
+                <input type="text" id="fingerprint" name="fingerprint" value="12345" readonly>
+                <small>For this prototype, enter '12345'.</small>
+            </div>
+            <div class="form-group">
+                <label for="pin">PIN Code:</label>
+                <input type="password" id="pin" name="pin" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+    </div>
+</body>
+</html>

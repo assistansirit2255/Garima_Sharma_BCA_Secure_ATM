@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS users;
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    atm_number TEXT UNIQUE NOT NULL,
+    hashed_pin TEXT NOT NULL,
+    balance REAL NOT NULL
+);
+
+INSERT INTO users (atm_number, hashed_pin, balance) VALUES ('123456', 'scrypt:32768:8:1$oys5pofmGD4998KU$85eb62089c3936e8897b77eeeae3426d4879f3d2cebfbf6efd967111e1cc71fb1818b020e3d531a51cf8c3fee0d8ced56368fae84a9d48046145adb0e30987ee', 1000.00);
+INSERT INTO users (atm_number, hashed_pin, balance) VALUES ('28402840', 'scrypt:32768:8:1$1qXMRVbQBnPIrJUS$452197aec160d828e1b070ed1d9ac74b42bcb0b788d81244e938ef72080ce55ae3675f6884a54ffd7065d82cc031881d68ce20801cc023fb5b28c8eba1c2f2a6', 10000.00);

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Balance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Your Balance</h1>
+        <p class="balance">Your current balance is: Rs. {{ '%.2f' % balance }}</p>
+        <p><a href="/dashboard" class="btn back-btn">Back to Dashboard</a></p>
+    </div>
+</body>
+</html>
